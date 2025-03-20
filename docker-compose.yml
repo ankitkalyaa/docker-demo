@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: .
+    command: ["python", "app.py"]
+    networks:
+      - sample_network
+    ports:
+      - "5000:5000"
+    container_name: my-flask-app
+  backend:
+    build: .
+    command: ["python", "app1.py"]
+    networks:
+      - sample_network
+    ports:
+       - "5001:5001"
+    container_name: my-flask-app1
+networks:
+  sample_network:
