@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 services:
   frontend:
@@ -15,7 +15,7 @@ services:
     networks:
       - sample_network
     ports:
-       - "5001:5001"
+      - "5001:5001"
     container_name: my-flask-app1
 networks:
   sample_network:
