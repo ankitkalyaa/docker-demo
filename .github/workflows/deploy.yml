@@ -1,9 +1,10 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline new
 
 on:
   push:
     branches:
       - main  # Trigger deployment on push to main branch
+
 
 jobs:
   build:
