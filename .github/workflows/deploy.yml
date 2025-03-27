@@ -28,7 +28,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.AWS_SSH_KEY }}
         source: "."
-        target: "/home/ubuntu/myapp"
+        target: "/home/ubuntu/docker-demo"
 
     - name: Deploy on EC2
       uses: appleboy/ssh-action@master
@@ -37,6 +37,6 @@ jobs:
         username: ubuntu
         key: ${{ secrets.AWS_SSH_KEY }}
         script: |
-          cd /home/ubuntu/myapp
+          cd /home/ubuntu/docker-demo
           docker-compose down
           docker-compose up --build -d
